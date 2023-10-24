@@ -1,0 +1,17 @@
+def numero_leituras_para_populacao_alta(populacao_inicial, populacao_alvo):
+  leituras = 0
+  while populacao_inicial <= populacao_alvo:
+    populacao_inicial *= 3
+    leituras += 1
+  return leituras
+
+
+populacao_inicial = 50000
+populacao_alvo = 200000
+
+leituras_necessarias = numero_leituras_para_populacao_alta(
+    populacao_inicial, populacao_alvo)
+
+print(
+    f"A população passara de 200 mil bactérias em {leituras_necessarias} leituras."
+)
