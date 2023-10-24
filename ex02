@@ -1,0 +1,15 @@
+def termo_pg(a, r, n):
+
+  if n == 1:
+    return a
+  else:
+
+    return termo_pg(a, r, n - 1) * r
+
+
+a = 4
+r = 5
+n = 6
+
+resultado = termo_pg(a, r, n)
+print(f'O {n}° termo da PG é: {resultado}')
