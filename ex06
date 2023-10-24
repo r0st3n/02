@@ -1,0 +1,16 @@
+def pertence_a_W(cadeia):
+  if cadeia == 'a' or cadeia == 'b' or cadeia == 'c':
+    return True
+  if cadeia.startswith('a') and cadeia.endswith('c'):
+    subcadeia = cadeia[1:-1]
+    return pertence_a_W(subcadeia)
+  return False
+
+
+cadeias = ['a(b)c', 'a(a(b)c)c', 'a(abc)c', 'a(a(a(a)c)c)c', 'a(aacc)c']
+
+for cadeia in cadeias:
+  if pertence_a_W(cadeia):
+    print(f"'{cadeia}' pertence a W.")
+  else:
+    print(f"'{cadeia}' não pertence a W.")
