@@ -1,0 +1,16 @@
+def cadeias_binarias_impares_zeros(n):
+  if n == 1:
+      return ['0', '1']
+  else:
+      subcadeias = cadeias_binarias_impares_zeros(n - 1)
+      resultado = []
+      for subcadeia in subcadeias:
+          resultado.append('0' + subcadeia)
+          resultado.append('1' + subcadeia)
+      return resultado
+
+n = 3
+cadeias_impares_zeros = cadeias_binarias_impares_zeros(n)
+
+for cadeia in cadeias_impares_zeros:
+  print(cadeia)
